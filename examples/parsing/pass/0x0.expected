@@ -1,0 +1,1 @@
+GameRecord {players = ["Amy","Bill"], grids = [Grid {width = 0, height = 0, rep = fromList []}], colours = fromList [Red,Green,Blue]}

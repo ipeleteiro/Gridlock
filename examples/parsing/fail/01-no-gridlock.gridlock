@@ -1,0 +1,11 @@
+Players: Amy, Bill.
+Grid: 3x3.
+Colours: red, green.
+
+Amy plays red at (0,0).
+Bill plays red at (2,0).
+Amy plays green at (1,1).
+Bill plays red at (0,2).
+Amy plays red at (2,2).
+Bill cannot move.
+Amy wins!

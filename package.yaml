@@ -1,0 +1,74 @@
+name:                cswk-gridlock
+version:             0.1.0.0
+license:             "AllRightsReserved"
+author:              "Alex Dixon"
+maintainer:          "alexander.dixon@warwick.ac.uk"
+copyright:           "2025 Alex Dixon"
+
+dependencies:
+- base >= 4.7 && < 5
+- containers
+- megaparsec
+- parser-combinators
+- ansi-terminal
+- pretty-simple
+- mtl # state
+- brick
+- vty
+- directory
+- random
+
+ghc-options:
+- -Wall
+- -Wcompat
+- -Widentities
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wmissing-home-modules
+- -Wpartial-fields
+- -Wredundant-constraints
+- -Wno-orphans 
+- -Wno-missing-export-lists
+
+language: GHC2021
+
+default-extensions: LambdaCase
+
+library:
+  source-dirs:
+    - src
+
+executable: 
+  main:                Main.hs
+  source-dirs:         app
+  ghc-options:
+  - -threaded
+  - -rtsopts
+  - -with-rtsopts=-N
+  dependencies:
+  - cswk-gridlock
+  - brick
+  - vty
+
+tests:
+  cswk-gridlock-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - cswk-gridlock
+    - tasty
+    - tasty-hunit
+    - tasty-quickcheck
+    - tasty-reporter-muffled
+    - random
+    - ansi-terminal
+    - QuickCheck
+    - containers
+    - cryptohash-md5
+    - bytestring
+    - directory
+    - filepath

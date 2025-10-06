@@ -1,0 +1,14 @@
+cradle:
+  multi:
+    - path: "./"
+      config:
+        cradle:
+          stack:
+            - path: "./app"
+              component: "cswk-gridlock:exe:cswk-gridlock"
+
+            - path: "./src"
+              component: "cswk-gridlock:lib"
+
+            - path: "./test"
+              component: "cswk-gridlock:test:cswk-gridlock-test"
